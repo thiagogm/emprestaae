@@ -1,0 +1,140 @@
+
+> empresta-ae-frontend@1.0.0 type-check
+> tsc --noEmit
+
+src/App.tsx(101,24): error TS6133: 'userData' is declared but its value is never read.
+src/components/AddItemScreen.tsx(76,9): error TS6133: 'isMobile' is declared but its value is never read.
+src/components/AddItemScreen.tsx(400,56): error TS2322: Type 'UserProfile | null' is not assignable to type 'User | null | undefined'.
+  Type 'UserProfile' is missing the following properties from type 'User': id, createdAt, updatedAt
+src/components/auth/ProtectedRoute.tsx(22,24): error TS2345: Argument of type '"onboarding" | "login"' is not assignable to parameter of type 'Screen'.
+  Type '"login"' is not assignable to type 'Screen'.
+src/components/auth/RegisterForm.tsx(15,21): error TS2339: Property 'checkEmailAvailability' does not exist on type '{ user: UserProfile | null; isAuthenticated: boolean; isLoading: boolean; error: string | null; isVerified: boolean; login: (data: LoginData) => Promise<{ success: boolean; error?: string | undefined; }>; ... 10 more ...; reset: () => void; }'.
+src/components/auth/RegisterForm.tsx(87,35): error TS2345: Argument of type '{ email: string; password: string; first_name: string; last_name: string; phone: string; }' is not assignable to parameter of type 'RegisterData'.
+  Type '{ email: string; password: string; first_name: string; last_name: string; phone: string; }' is missing the following properties from type 'RegisterData': name, confirmPassword
+src/components/ChatScreen.tsx(17,3): error TS6133: 'Clock' is declared but its value is never read.
+src/components/ChatScreen.tsx(18,3): error TS6133: 'Shield' is declared but its value is never read.
+src/components/ChatScreen.tsx(19,3): error TS6133: 'Calendar' is declared but its value is never read.
+src/components/ChatScreen.tsx(21,3): error TS6133: 'AlertCircle' is declared but its value is never read.
+src/components/ChatScreen.tsx(23,3): error TS6133: 'FileText' is declared but its value is never read.
+src/components/ChatScreen.tsx(24,3): error TS6133: 'Star' is declared but its value is never read.
+src/components/feed/CardComparison.tsx(16,3): error TS2353: Object literal may only specify known properties, and 'categoryName' does not exist in type 'Item'.
+src/components/feed/CardComparison.tsx(30,7): error TS2739: Type '{ id: string; name: string; email: string; avatar: string; rating: number; verified: true; location: { latitude: number; longitude: number; address: string; city: string; state: string; }; }' is missing the following properties from type 'UserWithDetails': createdAt, updatedAt
+src/components/feed/HorizontalItemCard.tsx(20,3): error TS6133: 'itemOwner' is declared but its value is never read.
+src/components/feed/ItemCard.tsx(2,33): error TS6133: 'Star' is declared but its value is never read.
+src/components/feed/ItemCard.tsx(20,34): error TS6133: 'variant' is declared but its value is never read.
+src/components/feed/ItemCard.tsx(20,55): error TS6133: 'itemOwner' is declared but its value is never read.
+src/components/feed/ItemCardSkeleton.tsx(9,36): error TS6133: 'variant' is declared but its value is never read.
+src/components/feed/ItemGrid.tsx(20,3): error TS6133: 'variant' is declared but its value is never read.
+src/components/feed/MinimalItemCard.tsx(15,41): error TS6133: 'itemOwner' is declared but its value is never read.
+src/components/feed/ModernItemCard.tsx(2,33): error TS6133: 'Star' is declared but its value is never read.
+src/components/feed/ModernItemCard.tsx(17,40): error TS6133: 'itemOwner' is declared but its value is never read.
+src/components/feed/ModernItemCard.tsx(17,51): error TS6133: 'variant' is declared but its value is never read.
+src/components/FeedHeader.tsx(34,9): error TS2322: Type '{ name: string; email: string; avatar: string | undefined; } | undefined' is not assignable to type 'User | null | undefined'.
+  Type '{ name: string; email: string; avatar: string | undefined; }' is missing the following properties from type 'User': id, createdAt, updatedAt
+src/components/filters/FilterSheet.tsx(3,3): error TS6133: 'X' is declared but its value is never read.
+src/components/filters/FilterSheet.tsx(9,3): error TS6133: 'Filter' is declared but its value is never read.
+src/components/filters/FilterSheet.tsx(10,3): error TS6133: 'ArrowLeft' is declared but its value is never read.
+src/components/filters/FilterSheet.tsx(20,1): error TS6133: 'Label' is declared but its value is never read.
+src/components/filters/FilterSheet.tsx(21,1): error TS6192: All imports in import declaration are unused.
+src/components/filters/FilterSheet.tsx(23,1): error TS6133: 'Switch' is declared but its value is never read.
+src/components/filters/FilterSheet.tsx(29,7): error TS6133: 'MAX_DISTANCE_KM' is declared but its value is never read.
+src/components/filters/FilterSheet.tsx(342,28): error TS18048: 'activeFilterCount' is possibly 'undefined'.
+src/components/home/HowItWorksSection.tsx(10,1): error TS6133: 'Separator' is declared but its value is never read.
+src/components/home/HowItWorksSection.tsx(12,1): error TS6133: 'Badge' is declared but its value is never read.
+src/components/home/ModernFinalCTASection.tsx(16,9): error TS6133: 'navigate' is declared but its value is never read.
+src/components/home/ModernHeroSection.tsx(13,9): error TS6133: 'navigate' is declared but its value is never read.
+src/components/insurance/InsuranceSheet.tsx(3,3): error TS6133: 'AlertCircle' is declared but its value is never read.
+src/components/insurance/InsuranceSheet.tsx(8,3): error TS6133: 'Star' is declared but its value is never read.
+src/components/insurance/InsuranceSheet.tsx(9,3): error TS6133: 'Zap' is declared but its value is never read.
+src/components/insurance/InsuranceSheet.tsx(29,1): error TS6192: All imports in import declaration are unused.
+src/components/insurance/InsuranceSheet.tsx(95,3): error TS6133: 'itemValue' is declared but its value is never read.
+src/components/insurance/InsuranceStep.tsx(10,3): error TS6133: 'Star' is declared but its value is never read.
+src/components/ItemDetails.tsx(54,31): error TS6133: 'index' is declared but its value is never read.
+src/components/ItemDetails.tsx(60,24): error TS2322: Type '{ id: string; user: { name: string; avatar: string; }; rating: number; comment: string; date: string; }[]' is not assignable to type 'Review[]'.
+  Type '{ id: string; user: { name: string; avatar: string; }; rating: number; comment: string; date: string; }' is missing the following properties from type 'Review': userAvatar, verified
+src/components/ItemDetails.tsx(71,18): error TS2304: Cannot find name 'MessageCircle'.
+src/components/ItemDetails.tsx(79,18): error TS2304: Cannot find name 'Calendar'.
+src/components/LoginScreen.tsx(21,3): error TS2741: Property 'address' is missing in type '{ latitude: number; longitude: number; }' but required in type 'Location'.
+src/components/LoginScreen.tsx(36,11): error TS6133: 'login' is declared but its value is never read.
+src/components/LoginScreen.tsx(36,28): error TS6133: 'user' is declared but its value is never read.
+src/components/LoginScreen.tsx(56,5): error TS6133: 'handleSubmit' is declared but its value is never read.
+src/components/LoginScreen.tsx(57,16): error TS6133: 'errors' is declared but its value is never read.
+src/components/LoginScreen.tsx(60,5): error TS6133: 'watch' is declared but its value is never read.
+src/components/LoginScreen.tsx(70,9): error TS6133: 'onSubmit' is declared but its value is never read.
+src/components/MainFeed.tsx(26,9): error TS6133: 'isAtTop' is declared but its value is never read.
+src/components/MainFeed.tsx(28,44): error TS2304: Cannot find name 'ApiItemWithDetails'.
+src/components/MainFeed.tsx(31,42): error TS2552: Cannot find name 'useCategories'. Did you mean 'categories'?
+src/components/MainFeed.tsx(32,45): error TS2304: Cannot find name 'useItems'.
+src/components/MainFeed.tsx(46,35): error TS2339: Property 'userLocation' does not exist on type 'SearchFilters'.
+src/components/MainFeed.tsx(50,30): error TS2339: Property 'userLocation' does not exist on type 'SearchFilters'.
+src/components/MainFeed.tsx(85,31): error TS2339: Property 'userLocation' does not exist on type 'SearchFilters'.
+src/components/MainFeed.tsx(86,31): error TS2339: Property 'userLocation' does not exist on type 'SearchFilters'.
+src/components/MainFeed.tsx(102,50): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/components/MainFeed.tsx(116,13): error TS2339: Property 'userLocation' does not exist on type 'SearchFilters'.
+src/components/MainFeed.tsx(132,9): error TS6133: 'handleCategorySelect' is declared but its value is never read.
+src/components/MainFeed.tsx(132,33): error TS6133: 'categoryId' is declared but its value is never read.
+src/components/MainFeed.tsx(137,35): error TS2304: Cannot find name 'ApiItemWithDetails'.
+src/components/MainFeed.tsx(141,9): error TS6133: 'handleProfileClick' is declared but its value is never read.
+src/components/MainFeed.tsx(163,26): error TS2322: Type '{ onExploreItems: () => void; onGetStarted: () => void; }' is not assignable to type 'IntrinsicAttributes'.
+  Property 'onExploreItems' does not exist on type 'IntrinsicAttributes'.
+src/components/map/GoogleMap.tsx(123,9): error TS2322: Type '{ latitude: number; longitude: number; city?: string | undefined; } | null' is not assignable to type 'Location | null'.
+  Property 'address' is missing in type '{ latitude: number; longitude: number; city?: string | undefined; }' but required in type 'Location'.
+src/components/OnboardingScreen.tsx(7,29): error TS7031: Binding element 'onNext' implicitly has an 'any' type.
+src/components/pages/Index.tsx(2,4): error TS2304: Cannot find name 'HeroSection'.
+src/components/pages/Index.tsx(3,4): error TS2304: Cannot find name 'HowItWorksSection'.
+src/components/pages/Index.tsx(4,4): error TS2304: Cannot find name 'TestimonialsSection'.
+src/components/ui/app-header.tsx(48,3): error TS6133: 'showHelpButton' is declared but its value is never read.
+src/components/ui/app-header.tsx(49,3): error TS6133: 'showSearchIcon' is declared but its value is never read.
+src/components/ui/bottom-nav.tsx(10,40): error TS6133: 'onOpenMenu' is declared but its value is never read.
+src/components/ui/button.tsx(6,1): error TS6133: 'classes' is declared but its value is never read.
+src/components/ui/calendar.tsx(47,20): error TS6133: '_props' is declared but its value is never read.
+src/components/ui/calendar.tsx(48,21): error TS6133: '_props' is declared but its value is never read.
+src/components/ui/categories-dropdown.tsx(2,1): error TS6133: 'Badge' is declared but its value is never read.
+src/components/ui/categories-dropdown.tsx(38,9): error TS6133: 'getCategoryColors' is declared but its value is never read.
+src/components/ui/categories-dropdown.tsx(67,34): error TS6133: 'index' is declared but its value is never read.
+src/components/ui/chart-utils.ts(11,46): error TS2339: Property 'dataKey' does not exist on type 'object'.
+src/components/ui/chart.tsx(115,32): error TS2339: Property 'length' does not exist on type '{}'.
+src/components/ui/chart.tsx(118,11): error TS2488: Type '{}' must have a '[Symbol.iterator]()' method that returns an iterator.
+src/components/ui/chart.tsx(172,7): error TS2322: Type '((label: any, payload: Payload<ValueType, NameType>[]) => ReactNode) | undefined' is not assignable to type '((label: string) => string) | undefined'.
+  Type '(label: any, payload: Payload<ValueType, NameType>[]) => ReactNode' is not assignable to type '(label: string) => string'.
+    Target signature provides too few arguments. Expected 2 or more, but got 1.
+src/components/ui/faq-section.tsx(24,61): error TS6133: 'onContactClick' is declared but its value is never read.
+src/components/ui/faq-section.tsx(24,77): error TS6133: 'onChatClick' is declared but its value is never read.
+src/components/ui/faq-section.tsx(180,34): error TS6133: 'index' is declared but its value is never read.
+src/components/ui/feedback-toast.tsx(13,7): error TS6133: 'getIcon' is declared but its value is never read.
+src/components/ui/feedback-toast.tsx(24,7): error TS6133: 'getToastStyles' is declared but its value is never read.
+src/components/UserProfile.tsx(134,55): error TS6133: 'isProfileSubmitting' is declared but its value is never read.
+src/components/UserProfile.tsx(136,12): error TS6133: 'watchProfile' is declared but its value is never read.
+src/components/UserProfile.tsx(149,16): error TS6133: 'passwordFormErrors' is declared but its value is never read.
+src/hooks/useItems.ts(117,55): error TS2345: Argument of type '{ search?: string; category?: string; location?: { latitude: number; longitude: number; }; maxDistance?: number; priceRange?: [number, number]; period?: "hora" | "dia" | "semana" | "mes"; ... 4 more ...; limit: number; }' is not assignable to parameter of type 'GetItemsParams'.
+  Types of property 'location' are incompatible.
+    Type '{ latitude: number; longitude: number; } | undefined' is not assignable to type 'Location | undefined'.
+      Property 'address' is missing in type '{ latitude: number; longitude: number; }' but required in type 'Location'.
+src/lib/utils.ts(179,7): error TS6133: 'lastResult' is declared but its value is never read.
+src/pages/AuthPage.tsx(27,9): error TS6198: All destructured elements are unused.
+src/pages/AuthPage.tsx(99,28): error TS2304: Cannot find name 'loginWithGoogle'.
+src/pages/AuthPage.tsx(103,28): error TS2304: Cannot find name 'loginWithFacebook'.
+src/pages/AuthPage.tsx(107,28): error TS2304: Cannot find name 'loginWithApple'.
+src/pages/InsurancePage.tsx(219,43): error TS6133: 'index' is declared but its value is never read.
+src/pages/InsuranceSuccessPage.tsx(15,9): error TS6133: 'scrollToTop' is declared but its value is never read.
+src/pages/InsuranceSuccessPage.tsx(19,9): error TS6133: 'fromHome' is declared but its value is never read.
+src/pages/InsuranceSuccessPage.tsx(88,44): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/pages/InsuranceSuccessPage.tsx(88,50): error TS7006: Parameter 'index' implicitly has an 'any' type.
+src/pages/ItemDetailsPage.tsx(50,9): error TS6133: 'handleShare' is declared but its value is never read.
+src/pages/ItemDetailsPage.tsx(84,9): error TS6133: 'handleFavorite' is declared but its value is never read.
+src/pages/LoanConfirmationPage.tsx(78,9): error TS6133: 'calculateDays' is declared but its value is never read.
+src/pages/LoanConfirmationPage.tsx(85,9): error TS6133: 'formatLocation' is declared but its value is never read.
+src/pages/LoanConfirmationPage.tsx(94,9): error TS6133: 'handleViewItem' is declared but its value is never read.
+src/pages/LoanConfirmationPage.tsx(98,9): error TS6133: 'handleGoHome' is declared but its value is never read.
+src/pages/LoanConfirmationPage.tsx(102,9): error TS6133: 'handleViewRequests' is declared but its value is never read.
+src/pages/LoanRequestPage.tsx(68,9): error TS6133: 'formatLocation' is declared but its value is never read.
+src/pages/LoanRequestPage.tsx(162,9): error TS6133: 'itemOwner' is declared but its value is never read.
+src/pages/PoliticaPrivacidade.tsx(8,9): error TS6133: 'user' is declared but its value is never read.
+src/services/geolocation.ts(26,20): error TS6133: 'MAX_RETRIES' is declared but its value is never read.
+src/services/geolocation.ts(27,20): error TS6133: 'RETRY_DELAY' is declared but its value is never read.
+src/services/googleGeolocation.ts(46,11): error TS6133: 'findAddressComponent' is declared but its value is never read.
+src/store/authStore.ts(149,29): error TS6133: 'data' is declared but its value is never read.
+npm ERR! Lifecycle script `type-check` failed with error: 
+npm ERR! Error: command failed 
+npm ERR!   in workspace: empresta-ae-frontend@1.0.0 
+npm ERR!   at location: C:\Users\thiag\OneDrive\├ürea de Trabalho\item-swap-go\frontend 

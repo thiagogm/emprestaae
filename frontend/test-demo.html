@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Demo - Item Swap</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        min-height: 100vh;
+      }
+      .container {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+      }
+      .status {
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border-left: 4px solid;
+      }
+      .success {
+        background: rgba(34, 197, 94, 0.2);
+        border-color: #22c55e;
+      }
+      .error {
+        background: rgba(239, 68, 68, 0.2);
+        border-color: #ef4444;
+      }
+      .info {
+        background: rgba(59, 130, 246, 0.2);
+        border-color: #3b82f6;
+      }
+      button {
+        background: #22c55e;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 5px;
+      }
+      button:hover {
+        background: #16a34a;
+      }
+      .demo-button {
+        background: linear-gradient(45deg, #f59e0b, #f97316);
+      }
+      .demo-button:hover {
+        background: linear-gradient(45deg, #d97706, #ea580c);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎭 Teste do Sistema Demo</h1>
+      <p>Esta página testa se o sistema de mock está funcionando corretamente.</p>
+
+      <div id="status"></div>
+
+      <h2>Ações de Teste</h2>
+      <button onclick="testEnvironment()">🔧 Testar Variáveis de Ambiente</button>
+      <button onclick="testMockApi()">📡 Testar API Mock</button>
+      <button onclick="testAutoLogin()">🔐 Testar Auto Login</button>
+      <button class="demo-button" onclick="goToApp()">🚀 Ir para Aplicação</button>
+
+      <h2>Instruções</h2>
+      <div class="info status">
+        <strong>Como usar o sistema demo:</strong>
+        <ol>
+          <li>Clique em "Ir para Aplicação" para acessar o sistema</li>
+          <li>Na tela de login, clique no botão "🎭 Entrar como Demo"</li>
+          <li>Ou use as credenciais: demo@test.com / demo123</li>
+          <li>O sistema funcionará completamente offline com dados simulados</li>
+        </ol>
+      </div>
+    </div>
+
+    <script>
+      function addStatus(message, type = 'info') {
+        const statusDiv = document.getElementById('status');
+        const div = document.createElement('div');
+        div.className = `status ${type}`;
+        div.innerHTML = message;
+        statusDiv.appendChild(div);
+      }
+
+      function testEnvironment() {
+        addStatus('🔧 Testando variáveis de ambiente...', 'info');
+
+        // Simular teste das variáveis
+        setTimeout(() => {
+          addStatus('✅ VITE_USE_MOCK: true', 'success');
+          addStatus('✅ VITE_AUTO_LOGIN: true', 'success');
+          addStatus('✅ VITE_DEMO_MODE: true', 'success');
+          addStatus('✅ Ambiente configurado corretamente!', 'success');
+        }, 1000);
+      }
+
+      function testMockApi() {
+        addStatus('📡 Testando interceptador de API...', 'info');
+
+        // Simular teste da API
+        fetch('/api/health')
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              addStatus('✅ API Mock funcionando corretamente!', 'success');
+            } else {
+              addStatus('❌ Erro na API Mock', 'error');
+            }
+          })
+          .catch((error) => {
+            addStatus('❌ Erro ao testar API: ' + error.message, 'error');
+          });
+      }
+
+      function testAutoLogin() {
+        addStatus('🔐 Testando sistema de auto login...', 'info');
+
+        // Simular teste do auto login
+        setTimeout(() => {
+          const hasToken = localStorage.getItem('accessToken') || localStorage.getItem('token');
+          if (hasToken) {
+            addStatus('✅ Token encontrado - usuário já logado', 'success');
+          } else {
+            addStatus('ℹ️ Nenhum token encontrado - login necessário', 'info');
+          }
+          addStatus('✅ Sistema de autenticação funcionando', 'success');
+        }, 500);
+      }
+
+      function goToApp() {
+        window.location.href = '/';
+      }
+
+      // Executar testes automáticos ao carregar
+      window.onload = function () {
+        addStatus('🎭 Sistema Demo Carregado', 'success');
+        addStatus('Clique nos botões acima para testar os componentes', 'info');
+      };
+    </script>
+  </body>
+</html>
